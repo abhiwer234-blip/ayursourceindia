@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products — AyurSource India</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* PRODUCTS */
+  .products-section { padding: 5rem 4rem; }
+  .product-block { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 5rem; padding-bottom: 5rem; border-bottom: 1px solid rgba(201,168,76,0.2); }
+  .product-block:last-child { border-bottom: none; margin-bottom: 0; }
+  .product-block.reverse { direction: rtl; }
+  .product-block.reverse > * { direction: ltr; }
+  .product-visual { background: var(--green-dark); border-radius: 2px; display: flex; align-items: center; justify-content: center; min-height: 320px; position: relative; overflow: hidden; }
+  .product-visual::before { content: ''; position: absolute; top: -60px; right: -60px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(201,168,76,0.15) 0%, transparent 70%); border-radius: 50%; }
+  .product-emoji-big { font-size: 6rem; }
+  .product-content {}
+  .product-num { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+  .product-name { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--green-dark); line-height: 1.1; margin-bottom: 0.3rem; }
+  .product-latin { font-size: 0.9rem; color: var(--gold); font-style: italic; margin-bottom: 1rem; }
+  .product-desc { font-size: 0.95rem; line-height: 1.8; color: var(--text-mid); font-weight: 300; margin-bottom: 1.5rem; }
+  .spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 1.5rem; }
+  .spec-item { display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.85rem; color: var(--text-mid); }
+  .spec-item::before { content: '✓'; color: var(--green-light); font-weight: bold; flex-shrink: 0; margin-top: 1px; }
+  .price-tag { background: var(--green-dark); color: var(--cream); padding: 1rem 1.5rem; display: inline-block; font-size: 0.85rem; margin-bottom: 1.5rem; }
+  .price-tag span { color: var(--gold); font-weight: 500; }
+
+  /* MOQ TABLE */
+  .moq-section { background: var(--cream); padding: 4rem; margin: 0 4rem 5rem; border: 1px solid rgba(201,168,76,0.2); }
+  .moq-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
+  .moq-table th { background: var(--green-dark); color: var(--gold); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 1rem; text-align: left; font-weight: 500; }
+  .moq-table td { padding: 0.9rem 1rem; font-size: 0.88rem; color: var(--text-mid); border-bottom: 1px solid rgba(201,168,76,0.1); }
+  .moq-table tr:last-child td { border-bottom: none; }
+  .moq-table tr:nth-child(even) td { background: rgba(201,168,76,0.04); }
+
+  /* PROCESS */
+  .process-section { background: var(--green-dark); padding: 5rem 4rem; }
+  .process-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-top: 3rem; position: relative; }
+  .process-steps::before { content: ''; position: absolute; top: 28px; left: 10%; right: 10%; height: 1px; background: rgba(201,168,76,0.3); z-index: 0; }
+  .step { text-align: center; position: relative; z-index: 1; }
+  .step-num { width: 56px; height: 56px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--green-dark); }
+  .step-title { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--cream); margin-bottom: 0.4rem; }
+  .step-desc { font-size: 0.78rem; color: rgba(253,248,240,0.6); line-height: 1.5; font-weight: 300; }
+
+  @media (max-width: 768px) {
+    .products-section { padding: 3rem 1.5rem; }
+    .product-block { grid-template-columns: 1fr; gap: 2rem; margin-bottom: 3rem; padding-bottom: 3rem; }
+    .product-block.reverse { direction: ltr; }
+    .product-visual { min-height: 220px; }
+    .product-name { font-size: 2rem; }
+    .spec-grid { grid-template-columns: 1fr; }
+    .moq-section { margin: 0 1.5rem 3rem; padding: 2rem 1.5rem; }
+    .process-section { padding: 3rem 1.5rem; }
+    .process-steps { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .process-steps::before { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">AyurSource <span>India</span></a>
+  <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html" class="active">Products</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <p class="page-hero-tag">What We Export</p>
+  <h1 class="page-hero-title">Our <em>Premium</em><br>Herbal Products</h1>
+  <p class="page-hero-sub">100% natural, lab-tested and export-ready herbal powders sourced from the best farms across India.</p>
+</div>
+
+<!-- PRODUCTS -->
+<section class="products-section">
+
+  <!-- AMLA -->
+  <div class="product-block" id="amla">
+    <div class="product-visual">
+      <span class="product-emoji-big">🫐</span>
+    </div>
+    <div class="product-content">
+      <p class="product-num">Product 01</p>
+      <h2 class="product-name">Amla Powder</h2>
+      <p class="product-latin">Emblica Officinalis · Indian Gooseberry</p>
+      <div class="gold-divider"></div>
+      <p class="product-desc">One of nature's richest sources of Vitamin C — containing up to 20x more than oranges. Amla powder is in massive global demand for dietary supplements, superfoods, hair care formulations and traditional Ayurvedic products. A staple ingredient for health brands worldwide.</p>
+      <div class="spec-grid">
+        <span class="spec-item">NABL Lab Tested</span>
+        <span class="spec-item">Pesticide Residue Free</span>
+        <span class="spec-item">Certificate of Analysis</span>
+        <span class="spec-item">Bulk & Custom Packing</span>
+        <span class="spec-item">Phytosanitary Certified</span>
+        <span class="spec-item">Non-GMO & Natural</span>
+      </div>
+      <div class="price-tag">Indicative FOB Price: <span>$4 – $8 / kg</span> &nbsp;|&nbsp; MOQ: <span>50 kg</span></div>
+      <br>
+      <a href="contact.html" class="btn-primary">Request Sample / Quote</a>
+    </div>
+  </div>
+
+  <!-- NEEM -->
+  <div class="product-block reverse" id="neem">
+    <div class="product-visual">
+      <span class="product-emoji-big">🌿</span>
+    </div>
+    <div class="product-content">
+      <p class="product-num">Product 02</p>
+      <h2 class="product-name">Neem Powder</h2>
+      <p class="product-latin">Azadirachta Indica · Miracle Herb</p>
+      <div class="gold-divider"></div>
+      <p class="product-desc">Called the "village pharmacy" of India, Neem is one of the most versatile herbs globally. High demand in organic skincare, haircare, natural pesticide formulations, and herbal supplement markets across the US, Australia, UK and Europe.</p>
+      <div class="spec-grid">
+        <span class="spec-item">Leaf & Seed Variants</span>
+        <span class="spec-item">Heavy Metal Tested</span>
+        <span class="spec-item">Microbial Certified</span>
+        <span class="spec-item">Phytosanitary Certified</span>
+        <span class="spec-item">Cosmetic Grade Available</span>
+        <span class="spec-item">Consistent Quality</span>
+      </div>
+      <div class="price-tag">Indicative FOB Price: <span>$3 – $6 / kg</span> &nbsp;|&nbsp; MOQ: <span>50 kg</span></div>
+      <br>
+      <a href="contact.html" class="btn-primary">Request Sample / Quote</a>
+    </div>
+  </div>
+
+  <!-- FITKARI -->
+  <div class="product-block" id="fitkari">
+    <div class="product-visual">
+      <span class="product-emoji-big">💎</span>
+    </div>
+    <div class="product-content">
+      <p class="product-num">Product 03</p>
+      <h2 class="product-name">Fitkari Powder</h2>
+      <p class="product-latin">Potassium Alum · Alum Powder</p>
+      <div class="gold-divider"></div>
+      <p class="product-desc">A widely used mineral with applications across multiple industries — natural deodorants, water purification, food processing, cosmetics and textile manufacturing. Growing global demand driven by the natural & organic personal care movement.</p>
+      <div class="spec-grid">
+        <span class="spec-item">Food Grade Available</span>
+        <span class="spec-item">Cosmetic Grade Available</span>
+        <span class="spec-item">High Purity</span>
+        <span class="spec-item">Lab Tested</span>
+        <span class="spec-item">Consistent Supply</span>
+        <span class="spec-item">Competitive Pricing</span>
+      </div>
+      <div class="price-tag">Indicative FOB Price: <span>$2 – $5 / kg</span> &nbsp;|&nbsp; MOQ: <span>50 kg</span></div>
+      <br>
+      <a href="contact.html" class="btn-primary">Request Sample / Quote</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- MOQ TABLE -->
+<div class="moq-section">
+  <p class="section-tag">Pricing Overview</p>
+  <h2 class="section-title">MOQ & <em>Pricing</em></h2>
+  <table class="moq-table">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>HS Code</th>
+        <th>MOQ</th>
+        <th>FOB Price (per kg)</th>
+        <th>Packaging</th>
+        <th>Lead Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Amla Powder</strong></td>
+        <td>0813.40</td>
+        <td>50 kg</td>
+        <td>$4 – $8</td>
+        <td>PP Bags / Custom</td>
+        <td>7–14 days</td>
+      </tr>
+      <tr>
+        <td><strong>Neem Powder</strong></td>
+        <td>1404.90</td>
+        <td>50 kg</td>
+        <td>$3 – $6</td>
+        <td>PP Bags / Custom</td>
+        <td>7–14 days</td>
+      </tr>
+      <tr>
+        <td><strong>Fitkari Powder</strong></td>
+        <td>2833.30</td>
+        <td>50 kg</td>
+        <td>$2 – $5</td>
+        <td>HDPE Bags / Custom</td>
+        <td>7–14 days</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.8rem; color:var(--text-mid); margin-top:1rem; font-weight:300;">* Prices are indicative and subject to quantity, grade and market conditions. Contact us for exact quotation.</p>
+</div>
+
+<!-- PROCESS -->
+<section class="process-section">
+  <div style="text-align:center;">
+    <p class="section-tag" style="color:var(--gold-light);">How It Works</p>
+    <h2 class="section-title" style="color:white;">Simple <em>Export</em> Process</h2>
+    <div class="gold-divider center"></div>
+  </div>
+  <div class="process-steps">
+    <div class="step"><div class="step-num">01</div><h4 class="step-title">Inquiry</h4><p class="step-desc">Share your product, quantity & destination country</p></div>
+    <div class="step"><div class="step-num">02</div><h4 class="step-title">Quotation</h4><p class="step-desc">We send pricing, lead time & sample availability</p></div>
+    <div class="step"><div class="step-num">03</div><h4 class="step-title">Sample</h4><p class="step-desc">Approve the sample before bulk order</p></div>
+    <div class="step"><div class="step-num">04</div><h4 class="step-title">Order</h4><p class="step-desc">Confirm order, we arrange production & testing</p></div>
+    <div class="step"><div class="step-num">05</div><h4 class="step-title">Ship</h4><p class="step-desc">Docs prepared & shipment dispatched on time</p></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-banner" style="background:var(--gold); padding:4rem; display:flex; justify-content:space-between; align-items:center; gap:2rem; flex-wrap:wrap;">
+  <div>
+    <h2 style="font-family:'Cormorant Garamond',serif; font-size:2.2rem; color:var(--green-dark);">Interested in Our Products?</h2>
+    <p style="font-size:0.95rem; color:var(--green-dark); opacity:0.8; margin-top:0.5rem;">Get samples and pricing within 24 hours.</p>
+  </div>
+  <a href="contact.html" class="btn-dark" style="background:var(--green-dark); color:var(--cream); padding:0.9rem 2rem; font-size:0.85rem; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; white-space:nowrap;">Request a Quote →</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <a href="index.html" class="footer-logo">AyurSource <span>India</span></a>
+      <p class="footer-desc">Premium herbal powder exports from India to the world. Trusted B2B partner for distributors and wholesalers globally.</p>
+    </div>
+    <div>
+      <p class="footer-heading">Quick Links</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-heading">Contact</p>
+      <ul class="footer-links">
+        <li><a href="mailto:info@ayursourceindia.live">info@ayursourceindia.live</a></li>
+        <li><a href="tel:+918383077103">+91 83830 77103</a></li>
+        <li><a href="#">Ghaziabad, UP, India</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 AyurSource India. All rights reserved.</p>
+    <p>B2B Herbal Powder Exports · India</p>
+  </div>
+</footer>
+
+</body>
+</html>

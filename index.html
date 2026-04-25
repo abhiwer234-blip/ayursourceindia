@@ -3,772 +3,101 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>AyurSource India | Bulk Herbal Exporter from India</title>
-
-<meta name="description" content="AyurSource India is a leading bulk exporter of Amla Powder, Neem Powder and Fitkari from India. Contact for global supply.">
-
-<link rel="canonical" href="https://ayursourceindia.live/">
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<title>AyurSource India — Premium Herbal Exports</title>
+<link rel="stylesheet" href="style.css">
 <style>
-  :root {
-    --green-dark: #1a3a2a;
-    --green-mid: #2d6a4f;
-    --green-light: #40916c;
-    --gold: #c9a84c;
-    --gold-light: #e8c97a;
-    --cream: #fdf8f0;
-    --text-dark: #0f2018;
-    --text-mid: #3a5a45;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'Jost', sans-serif;
-    background: var(--cream);
-    color: var(--text-dark);
-    overflow-x: hidden;
-  }
-
-  /* NAV */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.2rem 4rem;
-    background: rgba(253,248,240,0.92);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(201,168,76,0.2);
-  }
-
-  .nav-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--green-dark);
-    letter-spacing: 0.02em;
-  }
-
-  .nav-logo span { color: var(--gold); }
-
-  .nav-links {
-    display: flex;
-    gap: 2.5rem;
-    list-style: none;
-  }
-
-  .nav-links a {
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 400;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--text-mid);
-    transition: color 0.3s;
-  }
-
-  .nav-links a:hover { color: var(--gold); }
-
-  .nav-cta {
-    background: var(--green-dark);
-    color: var(--cream) !important;
-    padding: 0.6rem 1.5rem;
-    border-radius: 2px;
-  }
-
-  .nav-cta:hover { background: var(--gold); color: var(--green-dark) !important; }
-
   /* HERO */
-  .hero {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero-left {
-    background: var(--green-dark);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 8rem 4rem 4rem 4rem;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero-left::before {
-    content: '';
-    position: absolute;
-    top: -100px; left: -100px;
-    width: 400px; height: 400px;
-    background: radial-gradient(circle, rgba(201,168,76,0.15) 0%, transparent 70%);
-    border-radius: 50%;
-  }
-
-  .hero-left::after {
-    content: '';
-    position: absolute;
-    bottom: -80px; right: -80px;
-    width: 300px; height: 300px;
-    background: radial-gradient(circle, rgba(64,145,108,0.2) 0%, transparent 70%);
-    border-radius: 50%;
-  }
-
-  .hero-tag {
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 1.5rem;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 0.2s forwards;
-  }
-
-  .hero-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 4rem;
-    line-height: 1.1;
-    color: var(--cream);
-    margin-bottom: 1.5rem;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 0.4s forwards;
-  }
-
-  .hero-title em {
-    font-style: italic;
-    color: var(--gold-light);
-  }
-
-  .hero-desc {
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.8;
-    color: rgba(253,248,240,0.7);
-    max-width: 380px;
-    margin-bottom: 2.5rem;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 0.6s forwards;
-  }
-
-  .hero-btns {
-    display: flex;
-    gap: 1rem;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 0.8s forwards;
-  }
-
-  .btn-primary {
-    background: var(--gold);
-    color: var(--green-dark);
-    padding: 0.9rem 2rem;
-    font-family: 'Jost', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-
-  .btn-primary:hover {
-    background: var(--gold-light);
-    transform: translateY(-2px);
-  }
-
-  .btn-outline {
-    background: transparent;
-    color: var(--cream);
-    padding: 0.9rem 2rem;
-    font-family: 'Jost', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    text-decoration: none;
-    border: 1px solid rgba(253,248,240,0.3);
-    transition: all 0.3s;
-  }
-
-  .btn-outline:hover {
-    border-color: var(--gold);
-    color: var(--gold);
-  }
-
-  .hero-right {
-    background: var(--cream);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8rem 4rem 4rem 4rem;
-    position: relative;
-  }
-
-  .hero-visual {
-    width: 100%;
-    max-width: 420px;
-    position: relative;
-  }
-
-  .hero-card {
-    background: white;
-    border: 1px solid rgba(201,168,76,0.3);
-    padding: 2.5rem;
-    position: relative;
-    box-shadow: 0 20px 60px rgba(26,58,42,0.1);
-    opacity: 0;
-    animation: fadeIn 1s ease 0.6s forwards;
-  }
-
-  .hero-card::before {
-    content: '';
-    position: absolute;
-    top: -1px; left: 2rem;
-    width: 60px; height: 3px;
-    background: var(--gold);
-  }
-
-  .product-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-  }
-
-  .product-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding-bottom: 1.2rem;
-    border-bottom: 1px solid rgba(201,168,76,0.15);
-  }
-
+  .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; position: relative; overflow: hidden; }
+  .hero-left { background: var(--green-dark); display: flex; flex-direction: column; justify-content: center; padding: 8rem 4rem 4rem; position: relative; overflow: hidden; }
+  .hero-left::before { content: ''; position: absolute; top: -100px; left: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(201,168,76,0.15) 0%, transparent 70%); border-radius: 50%; }
+  .hero-tag { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 0.8s ease 0.2s forwards; }
+  .hero-title { font-family: 'Cormorant Garamond', serif; font-size: 4rem; line-height: 1.1; color: white; margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 0.8s ease 0.4s forwards; }
+  .hero-title em { font-style: italic; color: var(--gold-light); }
+  .hero-desc { font-size: 1rem; font-weight: 300; line-height: 1.8; color: rgba(253,248,240,0.7); max-width: 380px; margin-bottom: 2.5rem; opacity: 0; animation: fadeUp 0.8s ease 0.6s forwards; }
+  .hero-btns { display: flex; gap: 1rem; opacity: 0; animation: fadeUp 0.8s ease 0.8s forwards; }
+  .hero-right { background: var(--cream); display: flex; align-items: center; justify-content: center; padding: 8rem 4rem 4rem; }
+  .hero-card { background: white; border: 1px solid rgba(201,168,76,0.3); padding: 2.5rem; box-shadow: 0 20px 60px rgba(26,58,42,0.1); opacity: 0; animation: fadeIn 1s ease 0.6s forwards; position: relative; width: 100%; max-width: 380px; }
+  .hero-card::before { content: ''; position: absolute; top: -1px; left: 2rem; width: 60px; height: 3px; background: var(--gold); }
+  .product-list { list-style: none; display: flex; flex-direction: column; gap: 1.2rem; }
+  .product-item { display: flex; align-items: center; gap: 1rem; padding-bottom: 1.2rem; border-bottom: 1px solid rgba(201,168,76,0.15); }
   .product-item:last-child { border-bottom: none; padding-bottom: 0; }
-
-  .product-icon {
-    width: 48px; height: 48px;
-    background: var(--green-dark);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-    flex-shrink: 0;
-  }
-
-  .product-info h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--green-dark);
-  }
-
-  .product-info p {
-    font-size: 0.8rem;
-    color: var(--text-mid);
-    font-weight: 300;
-    margin-top: 0.2rem;
-  }
-
-  .product-badge {
-    margin-left: auto;
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--gold);
-    border: 1px solid var(--gold);
-    padding: 0.2rem 0.6rem;
-  }
+  .product-icon { width: 48px; height: 48px; background: var(--green-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+  .product-info h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--green-dark); }
+  .product-info p { font-size: 0.8rem; color: var(--text-mid); font-weight: 300; margin-top: 0.2rem; }
+  .product-badge { margin-left: auto; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); border: 1px solid var(--gold); padding: 0.2rem 0.6rem; flex-shrink: 0; }
 
   /* STATS */
-  .stats {
-    background: var(--green-dark);
-    padding: 3rem 4rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    text-align: center;
-  }
+  .stats { background: var(--green-dark); padding: 3rem 4rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; }
+  .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--gold); font-weight: 600; }
+  .stat-label { font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(253,248,240,0.6); margin-top: 0.3rem; }
 
-  .stat-item {}
-
-  .stat-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.5rem;
-    color: var(--gold);
-    font-weight: 600;
-  }
-
-  .stat-label {
-    font-size: 0.78rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: rgba(253,248,240,0.6);
-    margin-top: 0.3rem;
-  }
-
-  /* PRODUCTS SECTION */
-  .section {
-    padding: 6rem 4rem;
-  }
-
-  .section-header {
-    text-align: center;
-    margin-bottom: 4rem;
-  }
-
-  .section-tag {
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 1rem;
-  }
-
-  .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.8rem;
-    color: var(--green-dark);
-    line-height: 1.2;
-  }
-
-  .section-title em { font-style: italic; color: var(--green-light); }
-
-  .products-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-  }
-
-  .product-card {
-    border: 1px solid rgba(201,168,76,0.2);
-    padding: 2.5rem 2rem;
-    position: relative;
-    transition: all 0.3s;
-    background: white;
-  }
-
-  .product-card:hover {
-    border-color: var(--gold);
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(26,58,42,0.1);
-  }
-
-  .product-card::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0;
-    width: 0; height: 2px;
-    background: var(--gold);
-    transition: width 0.3s;
-  }
-
+  /* PRODUCTS PREVIEW */
+  .products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+  .product-card { border: 1px solid rgba(201,168,76,0.2); padding: 2.5rem 2rem; position: relative; transition: all 0.3s; background: white; }
+  .product-card:hover { border-color: var(--gold); transform: translateY(-4px); box-shadow: 0 20px 40px rgba(26,58,42,0.1); }
+  .product-card::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--gold); transition: width 0.3s; }
   .product-card:hover::after { width: 100%; }
-
   .pc-emoji { font-size: 2.5rem; margin-bottom: 1.2rem; display: block; }
+  .pc-name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--green-dark); margin-bottom: 0.5rem; }
+  .pc-hindi { font-size: 0.85rem; color: var(--gold); font-style: italic; margin-bottom: 1rem; }
+  .pc-desc { font-size: 0.88rem; line-height: 1.7; color: var(--text-mid); font-weight: 300; margin-bottom: 1.5rem; }
+  .pc-link { font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green-dark); text-decoration: none; font-weight: 500; border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
 
-  .pc-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--green-dark);
-    margin-bottom: 0.5rem;
-  }
-
-  .pc-hindi {
-    font-size: 0.85rem;
-    color: var(--gold);
-    font-style: italic;
-    margin-bottom: 1rem;
-  }
-
-  .pc-desc {
-    font-size: 0.88rem;
-    line-height: 1.7;
-    color: var(--text-mid);
-    font-weight: 300;
-    margin-bottom: 1.5rem;
-  }
-
-  .pc-specs {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-
-  .pc-spec {
-    font-size: 0.78rem;
-    color: var(--text-mid);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .pc-spec::before {
-    content: '✓';
-    color: var(--green-light);
-    font-weight: bold;
-  }
-
-  /* WHY US */
-  .why-section {
-    background: var(--green-dark);
-    padding: 6rem 4rem;
-  }
-
-  .why-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-  }
-
-  .why-left .section-tag { color: var(--gold-light); }
-
-  .why-left .section-title { color: var(--cream); }
-
-  .why-left p {
-    font-size: 0.95rem;
-    line-height: 1.8;
-    color: rgba(253,248,240,0.7);
-    margin-top: 1.5rem;
-    font-weight: 300;
-  }
-
-  .why-features {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-  }
-
-  .why-feature {
-    background: rgba(253,248,240,0.05);
-    border: 1px solid rgba(201,168,76,0.2);
-    padding: 1.5rem;
-    transition: all 0.3s;
-  }
-
-  .why-feature:hover {
-    background: rgba(201,168,76,0.1);
-    border-color: var(--gold);
-  }
-
+  /* WHY */
+  .why-section { background: var(--green-dark); padding: 5rem 4rem; }
+  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .why-features { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .why-feature { background: rgba(253,248,240,0.05); border: 1px solid rgba(201,168,76,0.2); padding: 1.5rem; transition: all 0.3s; }
+  .why-feature:hover { background: rgba(201,168,76,0.1); border-color: var(--gold); }
   .wf-icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
-
-  .wf-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    color: var(--cream);
-    margin-bottom: 0.4rem;
-  }
-
-  .wf-desc {
-    font-size: 0.8rem;
-    color: rgba(253,248,240,0.6);
-    font-weight: 300;
-    line-height: 1.6;
-  }
+  .wf-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--cream); margin-bottom: 0.4rem; }
+  .wf-desc { font-size: 0.8rem; color: rgba(253,248,240,0.6); font-weight: 300; line-height: 1.6; }
+  .why-left .section-title { color: var(--cream); }
+  .why-left p { font-size: 0.95rem; line-height: 1.8; color: rgba(253,248,240,0.7); margin-top: 1.5rem; font-weight: 300; }
 
   /* MARKETS */
-  .markets {
-    padding: 6rem 4rem;
-    text-align: center;
-  }
+  .markets-row { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 3rem; }
+  .market-chip { display: flex; align-items: center; gap: 0.8rem; padding: 1rem 2rem; border: 1px solid rgba(201,168,76,0.3); font-size: 0.9rem; color: var(--green-dark); transition: all 0.3s; text-decoration: none; }
+  .market-chip:hover { background: var(--green-dark); color: var(--cream); }
 
-  .markets-row {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 3rem;
-    flex-wrap: wrap;
-  }
+  /* CTA BANNER */
+  .cta-banner { background: var(--gold); padding: 4rem; display: flex; justify-content: space-between; align-items: center; gap: 2rem; }
+  .cta-banner h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--green-dark); }
+  .cta-banner p { font-size: 0.95rem; color: var(--green-dark); opacity: 0.8; margin-top: 0.5rem; }
+  .btn-dark { background: var(--green-dark); color: var(--cream); padding: 0.9rem 2rem; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; font-weight: 500; transition: all 0.3s; white-space: nowrap; }
+  .btn-dark:hover { background: var(--text-dark); }
 
-  .market-chip {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    padding: 1rem 2rem;
-    border: 1px solid rgba(201,168,76,0.3);
-    font-size: 0.9rem;
-    color: var(--green-dark);
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    transition: all 0.3s;
-  }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-  .market-chip:hover {
-    background: var(--green-dark);
-    color: var(--cream);
-    border-color: var(--green-dark);
-  }
-
-  .market-flag { font-size: 1.5rem; }
-
-  /* CONTACT */
-  .contact {
-    background: var(--green-dark);
-    padding: 6rem 4rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .contact::before {
-    content: '';
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-  }
-
-  .contact .section-tag { color: var(--gold-light); }
-  .contact .section-title { color: var(--cream); margin-bottom: 1rem; }
-
-  .contact-sub {
-    font-size: 0.95rem;
-    color: rgba(253,248,240,0.6);
-    font-weight: 300;
-    margin-bottom: 2.5rem;
-  }
-
-  .contact-info {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    margin-bottom: 3rem;
-    flex-wrap: wrap;
-  }
-
-  .contact-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.4rem;
-  }
-
-  .contact-item-label {
-    font-size: 0.72rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--gold);
-  }
-
-  .contact-item-value {
-    font-size: 0.95rem;
-    color: var(--cream);
-    font-weight: 300;
-  }
-
-  /* FOOTER */
-  footer {
-    background: var(--text-dark);
-    padding: 2rem 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .footer-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
-    color: var(--cream);
-  }
-
-  .footer-logo span { color: var(--gold); }
-
-  footer p {
-    font-size: 0.78rem;
-    color: rgba(253,248,240,0.4);
-  }
-
-  /* ANIMATIONS */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
-  /* DIVIDER */
-  .gold-divider {
-    width: 60px; height: 2px;
-    background: var(--gold);
-    margin: 1.5rem auto;
-  }
-
-  /* HAMBURGER */
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    padding: 4px;
-  }
-
-  .hamburger span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: var(--green-dark);
-    transition: all 0.3s;
-  }
-
-  /* MOBILE */
   @media (max-width: 768px) {
-    nav {
-      padding: 1rem 1.2rem;
-    }
-
-    .hamburger { display: flex; }
-
-    .nav-links {
-      display: none;
-      position: fixed;
-      top: 56px; left: 0; right: 0;
-      background: var(--cream);
-      flex-direction: column;
-      gap: 0;
-      padding: 0;
-      border-bottom: 2px solid var(--gold);
-      z-index: 99;
-    }
-
-    .nav-links.open { display: flex; }
-
-    .nav-links li { border-bottom: 1px solid rgba(201,168,76,0.15); }
-
-    .nav-links a {
-      display: block;
-      padding: 1rem 1.5rem;
-      font-size: 0.9rem;
-    }
-
-    .nav-cta {
-      margin: 0.8rem 1.2rem;
-      text-align: center;
-      border-radius: 2px;
-    }
-
-    /* HERO */
-    .hero {
-      grid-template-columns: 1fr;
-      min-height: auto;
-    }
-
-    .hero-left {
-      padding: 7rem 1.5rem 3rem;
-    }
-
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 7rem 1.5rem 3rem; }
     .hero-title { font-size: 2.6rem; }
-
-    .hero-right {
-      padding: 2rem 1.5rem 3rem;
-    }
-
-    .hero-btns {
-      flex-direction: column;
-      gap: 0.8rem;
-    }
-
-    .btn-primary, .btn-outline {
-      text-align: center;
-    }
-
-    /* STATS */
-    .stats {
-      grid-template-columns: repeat(2, 1fr);
-      padding: 2rem 1.5rem;
-      gap: 1.5rem;
-    }
-
-    /* SECTIONS */
-    .section { padding: 3.5rem 1.5rem; }
-
-    .section-title { font-size: 2rem; }
-
-    .products-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-
-    /* WHY */
-    .why-section { padding: 3.5rem 1.5rem; }
-
-    .why-grid {
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-    }
-
-    .why-features {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    /* MARKETS */
-    .markets { padding: 3.5rem 1.5rem; }
-
-    .markets-row {
-      gap: 0.8rem;
-    }
-
-    .market-chip {
-      padding: 0.7rem 1.2rem;
-      font-size: 0.82rem;
-    }
-
-    /* CONTACT */
-    .contact { padding: 3.5rem 1.5rem; }
-
-    .contact-info {
-      flex-direction: column;
-      gap: 1.5rem;
-      align-items: flex-start;
-      text-align: left;
-    }
-
-    /* FOOTER */
-    footer {
-      flex-direction: column;
-      gap: 0.5rem;
-      text-align: center;
-      padding: 1.5rem 1.2rem;
-    }
-  }
-
-  @media (max-width: 400px) {
-    .hero-title { font-size: 2.1rem; }
-    .stats { grid-template-columns: 1fr 1fr; }
-    .why-features { grid-template-columns: 1fr; }
+    .hero-right { padding: 2rem 1.5rem 3rem; }
+    .hero-btns { flex-direction: column; }
+    .stats { grid-template-columns: repeat(2,1fr); padding: 2rem 1.5rem; }
+    .products-grid { grid-template-columns: 1fr; }
+    .why-section { padding: 3rem 1.5rem; }
+    .why-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .why-features { grid-template-columns: 1fr 1fr; }
+    .market-chip { padding: 0.7rem 1.2rem; font-size: 0.82rem; }
+    .cta-banner { flex-direction: column; text-align: center; padding: 3rem 1.5rem; }
   }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
-  <div class="nav-logo">AyurSource <span>India</span></div>
+  <a href="index.html" class="nav-logo">AyurSource <span>India</span></a>
   <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
     <span></span><span></span><span></span>
   </div>
   <ul class="nav-links">
-    <li><a href="#products">Products</a></li>
-    <li><a href="#why">Why Us</a></li>
-    <li><a href="#markets">Markets</a></li>
-    <li><a href="#contact" class="nav-cta">Inquire Now</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
   </ul>
 </nav>
 
@@ -779,188 +108,149 @@
     <h1 class="hero-title">Nature's <em>Finest</em><br>From India<br>To The World</h1>
     <p class="hero-desc">We source, process and export premium quality herbal powders — Amla, Neem & Fitkari — directly to international distributors and wholesalers.</p>
     <div class="hero-btns">
-      <a href="#contact" class="btn-primary">Request a Quote</a>
-      <a href="#products" class="btn-outline">Our Products</a>
+      <a href="contact.html" class="btn-primary">Request a Quote</a>
+      <a href="products.html" class="btn-outline-light">Our Products</a>
     </div>
   </div>
   <div class="hero-right">
-    <div class="hero-visual">
-      <div class="hero-card">
-        <ul class="product-list">
-          <li class="product-item">
-            <div class="product-icon">🫐</div>
-            <div class="product-info">
-              <h3>Amla Powder</h3>
-              <p>Indian Gooseberry · Rich in Vitamin C</p>
-            </div>
-            <span class="product-badge">Export Ready</span>
-          </li>
-          <li class="product-item">
-            <div class="product-icon">🌿</div>
-            <div class="product-info">
-              <h3>Neem Powder</h3>
-              <p>Azadirachta Indica · Organic Grade</p>
-            </div>
-            <span class="product-badge">Export Ready</span>
-          </li>
-          <li class="product-item">
-            <div class="product-icon">💎</div>
-            <div class="product-info">
-              <h3>Fitkari Powder</h3>
-              <p>Potassium Alum · Food & Cosmetic Grade</p>
-            </div>
-            <span class="product-badge">Export Ready</span>
-          </li>
-        </ul>
-      </div>
+    <div class="hero-card">
+      <ul class="product-list">
+        <li class="product-item">
+          <div class="product-icon">🫐</div>
+          <div class="product-info"><h3>Amla Powder</h3><p>Indian Gooseberry · Rich in Vitamin C</p></div>
+          <span class="product-badge">Export Ready</span>
+        </li>
+        <li class="product-item">
+          <div class="product-icon">🌿</div>
+          <div class="product-info"><h3>Neem Powder</h3><p>Azadirachta Indica · Organic Grade</p></div>
+          <span class="product-badge">Export Ready</span>
+        </li>
+        <li class="product-item">
+          <div class="product-icon">💎</div>
+          <div class="product-info"><h3>Fitkari Powder</h3><p>Potassium Alum · Food & Cosmetic Grade</p></div>
+          <span class="product-badge">Export Ready</span>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
 
 <!-- STATS -->
 <div class="stats">
-  <div class="stat-item">
-    <div class="stat-num">3+</div>
-    <div class="stat-label">Premium Products</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-num">B2B</div>
-    <div class="stat-label">Wholesale Only</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-num">USA · AU</div>
-    <div class="stat-label">Key Markets</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-num">100%</div>
-    <div class="stat-label">Natural & Pure</div>
-  </div>
+  <div><div class="stat-num">3+</div><div class="stat-label">Premium Products</div></div>
+  <div><div class="stat-num">B2B</div><div class="stat-label">Wholesale Only</div></div>
+  <div><div class="stat-num">USA · AU</div><div class="stat-label">Key Markets</div></div>
+  <div><div class="stat-num">100%</div><div class="stat-label">Natural & Pure</div></div>
 </div>
 
-<!-- PRODUCTS -->
-<section class="section" id="products">
-  <div class="section-header">
+<!-- PRODUCTS PREVIEW -->
+<section class="section">
+  <div style="text-align:center; margin-bottom:3rem;">
     <p class="section-tag">What We Export</p>
     <h2 class="section-title">Our <em>Hero</em> Products</h2>
-    <div class="gold-divider"></div>
+    <div class="gold-divider center"></div>
   </div>
   <div class="products-grid">
     <div class="product-card">
       <span class="pc-emoji">🫐</span>
       <h3 class="pc-name">Amla Powder</h3>
       <p class="pc-hindi">Emblica Officinalis</p>
-      <p class="pc-desc">One of nature's richest sources of Vitamin C. Used widely in supplements, superfoods, hair care and Ayurvedic formulations globally.</p>
-      <div class="pc-specs">
-        <span class="pc-spec">NABL Lab Tested</span>
-        <span class="pc-spec">Pesticide Residue Free</span>
-        <span class="pc-spec">Bulk & Custom Packaging</span>
-        <span class="pc-spec">COA Available</span>
-      </div>
+      <p class="pc-desc">Nature's richest source of Vitamin C. Used in supplements, superfoods, hair care and Ayurvedic formulations globally.</p>
+      <a href="products.html#amla" class="pc-link">Learn More →</a>
     </div>
     <div class="product-card">
       <span class="pc-emoji">🌿</span>
       <h3 class="pc-name">Neem Powder</h3>
       <p class="pc-hindi">Azadirachta Indica</p>
-      <p class="pc-desc">The miracle herb of Ayurveda. In high demand globally for organic skincare, haircare, natural pesticides and herbal supplements.</p>
-      <div class="pc-specs">
-        <span class="pc-spec">Leaf & Seed Variants</span>
-        <span class="pc-spec">Heavy Metal Tested</span>
-        <span class="pc-spec">Microbial Certified</span>
-        <span class="pc-spec">Phytosanitary Certified</span>
-      </div>
+      <p class="pc-desc">The miracle herb of Ayurveda. High demand in organic skincare, haircare, and herbal supplement markets worldwide.</p>
+      <a href="products.html#neem" class="pc-link">Learn More →</a>
     </div>
     <div class="product-card">
       <span class="pc-emoji">💎</span>
       <h3 class="pc-name">Fitkari Powder</h3>
       <p class="pc-hindi">Potassium Alum</p>
-      <p class="pc-desc">A versatile mineral used in natural deodorants, water purification, cosmetics and food processing industries worldwide.</p>
-      <div class="pc-specs">
-        <span class="pc-spec">Food & Cosmetic Grade</span>
-        <span class="pc-spec">High Purity</span>
-        <span class="pc-spec">Consistent Quality</span>
-        <span class="pc-spec">Competitive Pricing</span>
-      </div>
+      <p class="pc-desc">Versatile mineral used in natural deodorants, water purification, cosmetics and food processing industries worldwide.</p>
+      <a href="products.html#fitkari" class="pc-link">Learn More →</a>
     </div>
+  </div>
+  <div style="text-align:center; margin-top:3rem;">
+    <a href="products.html" class="btn-outline-dark">View All Products</a>
   </div>
 </section>
 
 <!-- WHY US -->
-<section class="why-section" id="why">
+<section class="why-section">
   <div class="why-grid">
     <div class="why-left">
       <p class="section-tag">Why AyurSource India</p>
       <h2 class="section-title">Your Trusted <em>Herbal</em> Partner</h2>
-      <p>We bridge the gap between India's ancient herbal wealth and global wellness markets. Every product is carefully sourced, tested and exported with full documentation — giving our partners complete confidence.</p>
+      <p>We bridge the gap between India's ancient herbal wealth and global wellness markets. Every product is carefully sourced, tested and exported with full documentation.</p>
+      <div style="margin-top:2rem;">
+        <a href="about.html" class="btn-outline-light">About Us</a>
+      </div>
     </div>
     <div class="why-features">
-      <div class="why-feature">
-        <div class="wf-icon">🔬</div>
-        <h4 class="wf-title">Lab Tested</h4>
-        <p class="wf-desc">NABL certified lab reports for every batch shipped.</p>
-      </div>
-      <div class="why-feature">
-        <div class="wf-icon">📋</div>
-        <h4 class="wf-title">Full Documentation</h4>
-        <p class="wf-desc">COA, Phytosanitary, Commercial Invoice — all included.</p>
-      </div>
-      <div class="why-feature">
-        <div class="wf-icon">🚢</div>
-        <h4 class="wf-title">Reliable Shipping</h4>
-        <p class="wf-desc">Air & sea freight options. Bulk orders handled efficiently.</p>
-      </div>
-      <div class="why-feature">
-        <div class="wf-icon">🤝</div>
-        <h4 class="wf-title">B2B Focused</h4>
-        <p class="wf-desc">We work exclusively with distributors, stockists & wholesalers.</p>
-      </div>
+      <div class="why-feature"><div class="wf-icon">🔬</div><h4 class="wf-title">Lab Tested</h4><p class="wf-desc">NABL certified lab reports for every batch shipped.</p></div>
+      <div class="why-feature"><div class="wf-icon">📋</div><h4 class="wf-title">Full Docs</h4><p class="wf-desc">COA, Phytosanitary Certificate — all included.</p></div>
+      <div class="why-feature"><div class="wf-icon">🚢</div><h4 class="wf-title">Reliable Shipping</h4><p class="wf-desc">Air & sea freight options for all order sizes.</p></div>
+      <div class="why-feature"><div class="wf-icon">🤝</div><h4 class="wf-title">B2B Focused</h4><p class="wf-desc">Exclusively for distributors, stockists & wholesalers.</p></div>
     </div>
   </div>
 </section>
 
 <!-- MARKETS -->
-<section class="markets" id="markets">
-  <div class="section-header">
-    <p class="section-tag">Global Reach</p>
-    <h2 class="section-title">Markets We <em>Serve</em></h2>
-    <div class="gold-divider"></div>
-  </div>
+<section class="section" style="text-align:center;">
+  <p class="section-tag">Global Reach</p>
+  <h2 class="section-title">Markets We <em>Serve</em></h2>
+  <div class="gold-divider center"></div>
   <div class="markets-row">
-    <div class="market-chip"><span class="market-flag">🇺🇸</span> United States</div>
-    <div class="market-chip"><span class="market-flag">🇦🇺</span> Australia</div>
-    <div class="market-chip"><span class="market-flag">🇬🇧</span> United Kingdom</div>
-    <div class="market-chip"><span class="market-flag">🇨🇦</span> Canada</div>
-    <div class="market-chip"><span class="market-flag">🇩🇪</span> Germany</div>
-    <div class="market-chip"><span class="market-flag">🇦🇪</span> UAE</div>
+    <span class="market-chip">🇺🇸 United States</span>
+    <span class="market-chip">🇦🇺 Australia</span>
+    <span class="market-chip">🇬🇧 United Kingdom</span>
+    <span class="market-chip">🇨🇦 Canada</span>
+    <span class="market-chip">🇩🇪 Germany</span>
+    <span class="market-chip">🇦🇪 UAE</span>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <p class="section-tag">Get In Touch</p>
-  <h2 class="section-title">Ready to Source <em>Premium</em> Herbals?</h2>
-  <p class="contact-sub">Send us your requirements — MOQ, product, destination country — and we'll respond within 24 hours.</p>
-  <div class="contact-info">
-    <div class="contact-item">
-      <span class="contact-item-label">Email</span>
-      <span class="contact-item-value">info@ayursourceindia.live</span>
-    </div>
-    <div class="contact-item">
-      <span class="contact-item-label">Phone / WhatsApp</span>
-      <span class="contact-item-value">+91 83830 77103</span>
-    </div>
-    <div class="contact-item">
-      <span class="contact-item-label">Location</span>
-      <span class="contact-item-value">Ghaziabad, India</span>
-    </div>
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <div>
+    <h2>Ready to Source Premium Herbals?</h2>
+    <p>Send your requirements and get a quote within 24 hours.</p>
   </div>
-  <a href="mailto:info@ayursourceindia.live" class="btn-primary">Send Inquiry →</a>
-</section>
+  <a href="contact.html" class="btn-dark">Get In Touch →</a>
+</div>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">AyurSource <span>India</span></div>
-  <p>© 2026 AyurSource India. All rights reserved.</p>
-  <p>Ghaziabad, Uttar Pradesh, India</p>
+  <div class="footer-top">
+    <div>
+      <a href="index.html" class="footer-logo">AyurSource <span>India</span></a>
+      <p class="footer-desc">Premium herbal powder exports from India to the world. Trusted B2B partner for distributors and wholesalers globally.</p>
+    </div>
+    <div>
+      <p class="footer-heading">Quick Links</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-heading">Contact</p>
+      <ul class="footer-links">
+        <li><a href="mailto:info@ayursourceindia.live">info@ayursourceindia.live</a></li>
+        <li><a href="tel:+918383077103">+91 83830 77103</a></li>
+        <li><a href="#">Ghaziabad, UP, India</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 AyurSource India. All rights reserved.</p>
+    <p>B2B Herbal Powder Exports · India</p>
+  </div>
 </footer>
 
 </body>
