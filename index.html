@@ -604,6 +604,150 @@
     background: var(--gold);
     margin: 1.5rem auto;
   }
+
+  /* HAMBURGER */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--green-dark);
+    transition: all 0.3s;
+  }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    nav {
+      padding: 1rem 1.2rem;
+    }
+
+    .hamburger { display: flex; }
+
+    .nav-links {
+      display: none;
+      position: fixed;
+      top: 56px; left: 0; right: 0;
+      background: var(--cream);
+      flex-direction: column;
+      gap: 0;
+      padding: 0;
+      border-bottom: 2px solid var(--gold);
+      z-index: 99;
+    }
+
+    .nav-links.open { display: flex; }
+
+    .nav-links li { border-bottom: 1px solid rgba(201,168,76,0.15); }
+
+    .nav-links a {
+      display: block;
+      padding: 1rem 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-cta {
+      margin: 0.8rem 1.2rem;
+      text-align: center;
+      border-radius: 2px;
+    }
+
+    /* HERO */
+    .hero {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+
+    .hero-left {
+      padding: 7rem 1.5rem 3rem;
+    }
+
+    .hero-title { font-size: 2.6rem; }
+
+    .hero-right {
+      padding: 2rem 1.5rem 3rem;
+    }
+
+    .hero-btns {
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .btn-primary, .btn-outline {
+      text-align: center;
+    }
+
+    /* STATS */
+    .stats {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 2rem 1.5rem;
+      gap: 1.5rem;
+    }
+
+    /* SECTIONS */
+    .section { padding: 3.5rem 1.5rem; }
+
+    .section-title { font-size: 2rem; }
+
+    .products-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    /* WHY */
+    .why-section { padding: 3.5rem 1.5rem; }
+
+    .why-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .why-features {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    /* MARKETS */
+    .markets { padding: 3.5rem 1.5rem; }
+
+    .markets-row {
+      gap: 0.8rem;
+    }
+
+    .market-chip {
+      padding: 0.7rem 1.2rem;
+      font-size: 0.82rem;
+    }
+
+    /* CONTACT */
+    .contact { padding: 3.5rem 1.5rem; }
+
+    .contact-info {
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    /* FOOTER */
+    footer {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+      padding: 1.5rem 1.2rem;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .hero-title { font-size: 2.1rem; }
+    .stats { grid-template-columns: 1fr 1fr; }
+    .why-features { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
@@ -611,6 +755,9 @@
 <!-- NAV -->
 <nav>
   <div class="nav-logo">AyurSource <span>India</span></div>
+  <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
   <ul class="nav-links">
     <li><a href="#products">Products</a></li>
     <li><a href="#why">Why Us</a></li>
