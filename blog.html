@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — AyurSource India | Herbal Export Insights</title>
+<meta name="description" content="Read about Amla, Neem, Fitkari export market trends, Ayurvedic herb insights and global herbal industry news from AyurSource India.">
+<link rel="stylesheet" href="style.css">
+<style>
+  .blog-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; padding: 5rem 4rem; }
+  .blog-posts { display: flex; flex-direction: column; gap: 3rem; }
+
+  .blog-card { background: white; border: 1px solid rgba(201,168,76,0.2); overflow: hidden; transition: all 0.3s; }
+  .blog-card:hover { border-color: var(--gold); box-shadow: 0 10px 30px rgba(26,58,42,0.08); transform: translateY(-3px); }
+  .blog-card-img { background: var(--green-dark); height: 200px; display: flex; align-items: center; justify-content: center; font-size: 4rem; position: relative; overflow: hidden; }
+  .blog-card-img::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--gold); }
+  .blog-card-body { padding: 2rem; }
+  .blog-meta { display: flex; gap: 1rem; align-items: center; margin-bottom: 0.8rem; }
+  .blog-tag { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); background: rgba(201,168,76,0.1); padding: 0.2rem 0.8rem; border: 1px solid rgba(201,168,76,0.3); }
+  .blog-date { font-size: 0.78rem; color: var(--text-mid); opacity: 0.6; }
+  .blog-title { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--green-dark); line-height: 1.2; margin-bottom: 0.8rem; }
+  .blog-excerpt { font-size: 0.88rem; line-height: 1.8; color: var(--text-mid); font-weight: 300; margin-bottom: 1.2rem; }
+  .blog-read-more { font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green-dark); text-decoration: none; font-weight: 500; border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
+
+  /* SIDEBAR */
+  .blog-sidebar {}
+  .sidebar-widget { background: white; border: 1px solid rgba(201,168,76,0.2); padding: 1.8rem; margin-bottom: 2rem; }
+  .sidebar-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--green-dark); margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 2px solid var(--gold); }
+  .sidebar-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .sidebar-links li a { text-decoration: none; font-size: 0.85rem; color: var(--text-mid); transition: color 0.3s; display: flex; align-items: center; gap: 0.5rem; }
+  .sidebar-links li a:hover { color: var(--gold); }
+  .sidebar-links li a::before { content: '→'; color: var(--gold); font-size: 0.8rem; }
+  .tag-cloud { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .tag-cloud a { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-mid); border: 1px solid rgba(201,168,76,0.3); padding: 0.3rem 0.8rem; text-decoration: none; transition: all 0.3s; }
+  .tag-cloud a:hover { background: var(--green-dark); color: var(--cream); border-color: var(--green-dark); }
+  .cta-widget { background: var(--green-dark); border: none; }
+  .cta-widget .sidebar-title { color: var(--cream); border-bottom-color: var(--gold); }
+  .cta-widget p { font-size: 0.85rem; color: rgba(253,248,240,0.7); font-weight: 300; line-height: 1.7; margin-bottom: 1.2rem; }
+
+  @media (max-width: 768px) {
+    .blog-grid { grid-template-columns: 1fr; gap: 3rem; padding: 3rem 1.5rem; }
+    .blog-title { font-size: 1.3rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">AyurSource <span>India</span></a>
+  <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <p class="page-hero-tag">Insights & Updates</p>
+  <h1 class="page-hero-title">Herbal Export <em>Blog</em></h1>
+  <p class="page-hero-sub">Market trends, product insights and global herbal industry news from AyurSource India.</p>
+</div>
+
+<!-- BLOG GRID -->
+<div class="blog-grid">
+
+  <!-- POSTS -->
+  <div class="blog-posts">
+
+    <article class="blog-card">
+      <div class="blog-card-img">🫐</div>
+      <div class="blog-card-body">
+        <div class="blog-meta">
+          <span class="blog-tag">Amla</span>
+          <span class="blog-date">April 2026</span>
+        </div>
+        <h2 class="blog-title">Why Amla Powder is the #1 Superfood Ingredient for US & Australian Brands</h2>
+        <p class="blog-excerpt">Amla — the Indian Gooseberry — has become one of the most sought-after superfood ingredients in Western markets. With Vitamin C content up to 20x higher than oranges, health brands in the USA and Australia are increasingly sourcing Amla powder for supplements, smoothie mixes, and haircare formulations. Here's why demand is surging and what importers need to know.</p>
+        <a href="#" class="blog-read-more">Read More →</a>
+      </div>
+    </article>
+
+    <article class="blog-card">
+      <div class="blog-card-img">🌿</div>
+      <div class="blog-card-body">
+        <div class="blog-meta">
+          <span class="blog-tag">Neem</span>
+          <span class="blog-date">April 2026</span>
+        </div>
+        <h2 class="blog-title">Global Neem Powder Market: Opportunity for Distributors in 2026</h2>
+        <p class="blog-excerpt">The global neem market is projected to grow significantly through 2030, driven by rising demand in organic skincare, natural pesticides, and Ayurvedic healthcare. For distributors in the USA, UK and Australia, sourcing quality neem powder from India represents a significant opportunity. Here's what you need to know about grades, pricing and documentation.</p>
+        <a href="#" class="blog-read-more">Read More →</a>
+      </div>
+    </article>
+
+    <article class="blog-card">
+      <div class="blog-card-img">💎</div>
+      <div class="blog-card-body">
+        <div class="blog-meta">
+          <span class="blog-tag">Fitkari</span>
+          <span class="blog-date">March 2026</span>
+        </div>
+        <h2 class="blog-title">Alum (Fitkari) in Natural Deodorants: Why Brands Are Switching</h2>
+        <p class="blog-excerpt">The natural deodorant market is booming globally as consumers move away from synthetic antiperspirants. Potassium Alum — known as Fitkari in India — is emerging as the ingredient of choice for clean beauty brands. We look at why alum works, what grades are available, and how importers can source quality Fitkari powder from India.</p>
+        <a href="#" class="blog-read-more">Read More →</a>
+      </div>
+    </article>
+
+    <article class="blog-card">
+      <div class="blog-card-img">🚢</div>
+      <div class="blog-card-body">
+        <div class="blog-meta">
+          <span class="blog-tag">Export Guide</span>
+          <span class="blog-date">March 2026</span>
+        </div>
+        <h2 class="blog-title">Complete Guide: Importing Herbal Powders from India to USA & Australia</h2>
+        <p class="blog-excerpt">Importing herbal powders from India involves understanding regulations, documentation and quality standards specific to your market. This guide covers everything — from FDA registration requirements for US importers, to DAFF compliance for Australian buyers, to what lab reports you should always ask for before placing a bulk order.</p>
+        <a href="#" class="blog-read-more">Read More →</a>
+      </div>
+    </article>
+
+    <article class="blog-card">
+      <div class="blog-card-img">🌱</div>
+      <div class="blog-card-body">
+        <div class="blog-meta">
+          <span class="blog-tag">Ayurveda</span>
+          <span class="blog-date">February 2026</span>
+        </div>
+        <h2 class="blog-title">Ayurvedic Herbs Going Global: How India is Powering the World's Wellness Movement</h2>
+        <p class="blog-excerpt">The global wellness industry is valued at over $5 trillion — and Ayurvedic herbs from India are at the center of this movement. From Amla to Neem to Ashwagandha, Indian herbs are finding their way into supplement brands, beauty products and functional foods across every major market. We explore the trends driving this shift.</p>
+        <a href="#" class="blog-read-more">Read More →</a>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside class="blog-sidebar">
+
+    <div class="sidebar-widget cta-widget">
+      <h3 class="sidebar-title">Request a Quote</h3>
+      <p>Looking for bulk Amla, Neem or Fitkari powder? We supply to distributors across USA, Australia, UK and more.</p>
+      <a href="contact.html" class="btn-primary" style="display:block; text-align:center;">Get Pricing →</a>
+    </div>
+
+    <div class="sidebar-widget">
+      <h3 class="sidebar-title">Our Products</h3>
+      <ul class="sidebar-links">
+        <li><a href="products.html#amla">Amla Powder</a></li>
+        <li><a href="products.html#neem">Neem Powder</a></li>
+        <li><a href="products.html#fitkari">Fitkari Powder</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-widget">
+      <h3 class="sidebar-title">Topics</h3>
+      <div class="tag-cloud">
+        <a href="#">Amla</a>
+        <a href="#">Neem</a>
+        <a href="#">Fitkari</a>
+        <a href="#">Export</a>
+        <a href="#">Ayurveda</a>
+        <a href="#">USA Market</a>
+        <a href="#">Australia</a>
+        <a href="#">B2B</a>
+        <a href="#">Herbal</a>
+        <a href="#">Wellness</a>
+      </div>
+    </div>
+
+    <div class="sidebar-widget">
+      <h3 class="sidebar-title">Contact Us</h3>
+      <ul class="sidebar-links">
+        <li><a href="mailto:info@ayursourceindia.live">info@ayursourceindia.live</a></li>
+        <li><a href="tel:+918383077103">+91 83830 77103</a></li>
+        <li><a href="contact.html">Send Inquiry</a></li>
+      </ul>
+    </div>
+
+  </aside>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <a href="index.html" class="footer-logo">AyurSource <span>India</span></a>
+      <p class="footer-desc">Premium herbal powder exports from India to the world. Trusted B2B partner for distributors and wholesalers globally.</p>
+    </div>
+    <div>
+      <p class="footer-heading">Quick Links</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-heading">Contact</p>
+      <ul class="footer-links">
+        <li><a href="mailto:info@ayursourceindia.live">info@ayursourceindia.live</a></li>
+        <li><a href="tel:+918383077103">+91 83830 77103</a></li>
+        <li><a href="#">Ghaziabad, UP, India</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 AyurSource India. All rights reserved.</p>
+    <p>B2B Herbal Powder Exports · India</p>
+  </div>
+</footer>
+
+</body>
+</html>
